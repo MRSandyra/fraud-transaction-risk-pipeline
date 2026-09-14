@@ -217,7 +217,6 @@ ingestion/          Seed script and Kafka producers (run from the host)
 postgres_init/      Source schema for PostgreSQL
 spark_jobs/         Structured Streaming job and batch medallion job
 docker-compose.yml  The whole stack
-WALKTHROUGH.md      Step-by-step runbook (Indonesian)
 ```
 
 ## Data and license
