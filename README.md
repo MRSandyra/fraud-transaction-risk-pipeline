@@ -106,7 +106,7 @@ every mart, plus accepted values on the alert flag.
 
 ## Dashboard
 
-<!-- Drop a screenshot at docs/dashboard.png, then uncomment:
+<!--
 ![Fraud Monitoring dashboard in Superset](docs/dashboard.png)
 -->
 
