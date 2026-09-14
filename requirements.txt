@@ -1,0 +1,9 @@
+pandas==2.2.2
+psycopg2-binary==2.9.9
+pymongo==4.7.2
+Faker==25.2.0
+requests==2.32.3
+kafka-python-ng==2.2.3
+websocket-client==1.8.0
+dbt-clickhouse==1.7.1
+python-dotenv==1.2.3

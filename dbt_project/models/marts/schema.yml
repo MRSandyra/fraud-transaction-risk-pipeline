@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_fraud_rate_daily
+    description: "Mart final fraud rate harian, siap konsumsi dashboard."
+    columns:
+      - name: day
+        tests: [not_null, unique]
+      - name: fraud_rate_pct
+        tests: [not_null]
+
+  - name: dim_high_risk_merchants
+    description: "Leaderboard merchant paling berisiko berdasarkan fraud_ratio_pct."
+    columns:
+      - name: name_dest
+        tests: [not_null, unique]
+
+  - name: fct_user_risk_alerts
+    description: "Daftar user dengan velocity_risk_flag = 1, dipakai live alert feed dashboard."
+    columns:
+      - name: name_orig
+        tests: [not_null]
+      - name: velocity_risk_flag
+        tests:
+          - accepted_values:
+              values: [1]

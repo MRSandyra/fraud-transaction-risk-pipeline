@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_fraud_rate_daily
+    description: "Data harian total transaksi dan fraud, dibaca langsung dari gold layer di MinIO."
+    columns:
+      - name: day
+        tests: [not_null, unique]
+      - name: fraud_rate
+        tests: [not_null]
+
+  - name: stg_high_risk_merchants
+    description: "Agregasi transaksi per merchant, dibaca langsung dari gold layer di MinIO."
+    columns:
+      - name: name_dest
+        tests: [not_null, unique]
+
+  - name: stg_transaction_velocity
+    description: "Jumlah transaksi per user per step, dibaca langsung dari gold layer di MinIO."
+    columns:
+      - name: name_orig
+        tests: [not_null]
+      - name: tx_count_in_step
+        tests: [not_null]

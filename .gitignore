@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+data/
+.env
+target/
+dbt_packages/
+logs/
+kaggle.json
+dbt_project/.user.yml
